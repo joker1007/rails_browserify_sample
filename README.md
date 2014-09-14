@@ -1,0 +1,3 @@
+Railsをbrowserifyと組み合わせるサンプル実装
+
+typescriptとmarionette.jsを利用している。

@@ -1,0 +1,19 @@
+@import "compass/css3";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap-compass.scss";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+
+.todo {
+  .todo_title {
+    font-size: 20px;
+  }
+
+  &.is_done {
+    .todo_title {
+      text-decoration: line-through;
+    }
+  }
+
+  .destroy {
+    cursor: pointer;
+  }
+}
