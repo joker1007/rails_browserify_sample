@@ -2,8 +2,8 @@
   "version": "v4",
   "repo": "borisyankov/DefinitelyTyped",
   "ref": "master",
-  "path": "app/assets/typings",
-  "bundle": "app/assets/typings/tsd.d.ts",
+  "path": "frontend/assets/typings",
+  "bundle": "frontend/assets/typings/tsd.d.ts",
   "installed": {
     "backbone/backbone.d.ts": {
       "commit": "50dd84eb5d5593787b7686decf1476d094f5e13a"

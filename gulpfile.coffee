@@ -126,7 +126,7 @@ gulp.task 'glyphicon', ->
     .pipe(gulp.dest("public/assets/fonts/bootstrap"))
 
 gulp.task 'sass', ['glyphicon'], ->
-  css = gulp.src(['app/assets/stylesheets/**/*.scss', 'app/assets/stylesheets/**/*.sass'])
+  css = gulp.src(['frontend/assets/stylesheets/**/*.scss', 'frontend/assets/stylesheets/**/*.sass'])
     .pipe(gulp.dest("public/assets/sass"))
     .pipe(plumber())
     .pipe(sass(
@@ -149,8 +149,8 @@ gulp.task 'sass', ['glyphicon'], ->
 
 ### watch ###########################################
 gulp.task 'watch', ['browser-sync'], ->
-  gulp.watch('app/assets/javascripts/**/*.{js,coffee,ts}', ['browserify'])
-  gulp.watch('app/assets/stylesheets/**/*.{scss,sass}', ['sass'])
+  gulp.watch('frontend/assets/javascripts/**/*.{js,coffee,ts}', ['browserify'])
+  gulp.watch('frontend/assets/stylesheets/**/*.{scss,sass}', ['sass'])
   gulp.watch([
     'public/assets/**/*.js',
     'public/assets/**/*.css',

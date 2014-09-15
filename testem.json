@@ -3,7 +3,7 @@
   "before_tests": "gulp browserify-test",
   "on_exit": "rm -rf ./spec/.powered-javascripts/",
   "src_files": [
-    "./app/assets/javascripts/**/*.{js,coffee,ts}",
+    "./frontend/assets/javascripts/**/*.{js,coffee,ts}",
     "./spec/javascripts/**/*_spec.{js,ts,coffee}"
   ],
   "serve_files": [

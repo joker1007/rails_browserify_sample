@@ -44,9 +44,9 @@
   "browserify-shim": {},
   "browserify": {
     "entryScripts": [
-      "./app/assets/javascripts/bundle.ts",
-      "./app/assets/javascripts/users.js.coffee",
-      "./app/assets/javascripts/hello.ts"
+      "./frontend/assets/javascripts/bundle.ts",
+      "./frontend/assets/javascripts/users.js.coffee",
+      "./frontend/assets/javascripts/hello.ts"
     ]
   },
   "author": "joker1007",

@@ -1,7 +1,7 @@
-/// <reference path="../../app/assets/typings/tsd.d.ts" />
-/// <reference path="../../app/assets/typings/power-assert.d.ts" />
+/// <reference path="../../frontend/assets/typings/tsd.d.ts" />
+/// <reference path="../../frontend/assets/typings/power-assert.d.ts" />
 var assert = require('power-assert');
-var Hello = require('../../app/assets/javascripts/hello');
+var Hello = require('../../frontend/assets/javascripts/hello');
 
 var hello = Hello.hello;
 var fib = Hello.fib;

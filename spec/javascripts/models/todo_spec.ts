@@ -1,8 +1,8 @@
-/// <reference path="../../../app/assets/typings/tsd.d.ts" />
-/// <reference path="../../../app/assets/typings/power-assert.d.ts" />
+/// <reference path="../../../frontend/assets/typings/tsd.d.ts" />
+/// <reference path="../../../frontend/assets/typings/power-assert.d.ts" />
 
 import assert = require('power-assert');
-import TodoModel = require('../../../app/assets/javascripts/models/todo');
+import TodoModel = require('../../../frontend/assets/javascripts/models/todo');
 
 describe("Todo", function() {
   it("create", function() {

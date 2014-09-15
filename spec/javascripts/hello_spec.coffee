@@ -1,5 +1,5 @@
 assert = require('power-assert')
-Hello = require('../../app/assets/javascripts/hello')
+Hello = require('../../frontend/assets/javascripts/hello')
 
 hello = Hello.hello
 
