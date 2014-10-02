@@ -24,3 +24,10 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
 end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
+
+ruby '2.1.3'
