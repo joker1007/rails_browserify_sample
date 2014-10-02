@@ -22,3 +22,5 @@ bower_components
 
 /spec/.powered-javascripts
 .sass-cache
+
+.envrc
