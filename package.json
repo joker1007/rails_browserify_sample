@@ -20,6 +20,8 @@
     "gulp-jshint": "^1.8.4",
     "gulp-minify-css": "^0.3.8",
     "gulp-plumber": "^0.6.5",
+    "gulp-rev": "^1.1.0",
+    "gulp-rev-rails-manifest": "git://github.com/joker1007/gulp-rev-rails-manifest.git",
     "gulp-rimraf": "^0.1.0",
     "gulp-ruby-sass": "^0.7.1",
     "gulp-size": "^1.1.0",

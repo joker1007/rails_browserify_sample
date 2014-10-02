@@ -8,6 +8,8 @@ minifyCSS = require('gulp-minify-css')
 streamify = require('gulp-streamify')
 size      = require('gulp-size')
 tap       = require('gulp-tap')
+rev       = require('gulp-rev')
+manifest  = require('gulp-rev-rails-manifest')
 
 browserify = require('browserify')
 ts         = require('tsify')
@@ -87,11 +89,16 @@ gulp.task 'browserify', ->
         }).bundle().on('error', util.log).pipe(source(output))
 
       stream = if minify
-        bundler.pipe(streamify(uglify())).pipe(streamify(size()))
+        bundler.pipe(streamify(uglify()))
       else
         bundler
 
-      return stream.pipe(gulp.dest("public/assets"))
+      stream
+        .pipe(streamify(size()))
+        .pipe(streamify(rev()))
+        .pipe(gulp.dest("public/assets"))
+        .pipe(manifest())
+        .pipe(gulp.dest("public/assets"))
     )
 
 gulp.task 'browserify-test', ->
