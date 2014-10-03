@@ -18,7 +18,6 @@ espowerify = require('espowerify')
 mold       = require('mold-source-map')
 
 path        = require('path')
-browserSync = require('browser-sync')
 pkg         = require(__dirname + '/package.json')
 
 minify = false
@@ -27,14 +26,6 @@ environment = process.env['ENV'] || 'development'
 if environment == 'production'
   minify = true
 
-
-### browserSync ###########################################
-gulp.task 'browser-sync', ->
-  browserSync
-    proxy: "http://localhost:3000"
-
-gulp.task 'bs-reload', ->
-  browserSync.reload()
 
 gulp.task 'clean', ->
   gulp.src('public/assets')
@@ -154,13 +145,25 @@ gulp.task 'sass', ['glyphicon'], ->
   stream.pipe(gulp.dest("public/assets"))
 
 
-### watch ###########################################
-gulp.task 'watch', ['browser-sync'], ->
-  gulp.watch('frontend/assets/javascripts/**/*.{js,coffee,ts}', ['browserify'])
-  gulp.watch('frontend/assets/stylesheets/**/*.{scss,sass}', ['sass'])
-  gulp.watch([
-    'public/assets/**/*.js',
-    'public/assets/**/*.css',
-  ], ['bs-reload'])
+### browserSync ###########################################
+try
+  browserSync = require('browser-sync')
+
+  gulp.task 'browser-sync', ->
+    browserSync
+      proxy: "http://localhost:3000"
+
+  gulp.task 'bs-reload', ->
+    browserSync.reload()
+
+  ### watch ###########################################
+  gulp.task 'watch', ['browser-sync'], ->
+    gulp.watch('frontend/assets/javascripts/**/*.{js,coffee,ts}', ['browserify'])
+    gulp.watch('frontend/assets/stylesheets/**/*.{scss,sass}', ['sass'])
+    gulp.watch([
+      'public/assets/**/*.js',
+      'public/assets/**/*.css',
+    ], ['bs-reload'])
+catch error
 
 gulp.task 'default', ['browserify', 'sass']

@@ -9,7 +9,7 @@ Rake::Task['assets:precompile'].clear
 namespace :assets do
   desc "Assets precompile by Node.js"
   task :precompile => [:environment] do
-    sh "npm install"
+    sh "npm install --production"
     sh "ENV=production ./node_modules/.bin/gulp browserify"
     sh "ENV=production ./node_modules/.bin/gulp sass"
   end
